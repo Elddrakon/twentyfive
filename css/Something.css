@@ -64,7 +64,8 @@
     font-size: 2.5rem;
 }
 #wrapper {
-    
+    margin-bottom: 10px;
+    gap: 10px;
     margin-top:120px;
     display: grid;
     background-color:white;
@@ -83,7 +84,31 @@
 
 /* for menu buttons for mobile (end) */
 
+/* for layout mobile version (start) */
+
+
+@media screen and (max-width: 580px) {
+    #nav1 {
+        display:none;
+    }
+}
+
+@media screen and (min-width: 580px) {
+    #wrapper {
+        grid-template-columns: 50% 50%;
+    }
+}
+
 /* generell kod */
+
+#nav1 {
+    grid-area:nv;
+    background-color:black;
+    display:flex;
+    align-items:center;
+    justify-content: space-evenly;
+    color:white;
+}
 
 .igsec {
     grid-area: ig;
@@ -115,6 +140,11 @@
     background-color:green;
 }
 
+#footer1 {
+    grid-area: ft;
+    background-color:pink;
+}
+
 .logo_fit {
     height:85px;
     width:150x;
@@ -127,5 +157,6 @@
 
 #picture_fit {
     size-adjust:auto;
+    width:100%
 }
 
