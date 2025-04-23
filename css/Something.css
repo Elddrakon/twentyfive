@@ -12,9 +12,14 @@
     justify-content:space-between;
     align-items:center;
     /* mobil version */
+    z-index: 4;
     
    
 }
+
+
+
+
 
 /* for menu buttons for mobile (Start) */
 
@@ -63,15 +68,22 @@
 .menu-button i.shop-icon{
     font-size: 2.5rem;
 }
+
+#wrapper * {
+    padding-top:0px;
+}
+
+
 #wrapper {
     margin-bottom: 10px;
-    gap: 10px;
+    gap: 5px;
     margin-top:120px;
     display: grid;
     background-color:white;
+    padding-top:0px;
     height: 100vh;
     grid-template-columns: 100% 100%;
-    grid-template-rows: 10% 400px 20% 20% 20% 80px;
+    grid-template-rows: 10% 400px 30% 30% 30% 100px;
     grid-template-areas: 
     'nv nv'
     'ig ig'
@@ -84,20 +96,6 @@
 
 /* for menu buttons for mobile (end) */
 
-/* for layout mobile version (start) */
-
-
-@media screen and (max-width: 580px) {
-    #nav1 {
-        display:none;
-    }
-}
-
-@media screen and (min-width: 580px) {
-    #wrapper {
-        grid-template-columns: 50% 50%;
-    }
-}
 
 /* generell kod */
 
@@ -110,15 +108,22 @@
     color:white;
 }
 
+
+
+
+
 .igsec {
     grid-area: ig;
-    background-color: black;
+    background-color: blue;
 }
 
 #section1 {
     grid-area: sc1;
-    background-color: purple;
+    background-color: red;
+    top:-10px;
 }
+
+
 
 #section2 {
     grid-area: sc2;
@@ -127,22 +132,26 @@
 
 #section3 {
     grid-area: sc3;
-    background-color: red;
+    background-color: grey;
 }
 
 #section4 {
     grid-area: sc4;
-    background-color: blue;
+    background-color: purple;
 }
 
 #section5 {
     grid-area: sc5;
-    background-color:green;
+    background-color:pink;
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
+
 }
 
 #footer1 {
     grid-area: ft;
-    background-color:pink;
+    background-color:orange;
 }
 
 .logo_fit {
@@ -160,3 +169,52 @@
     width:100%
 }
 
+#merchbuttonfit {
+    border-radius:10%;
+    width:300px;
+    
+}
+
+#merchbuttonfit:hover {
+    border-radius:10%;
+    animation-name: sizechangeanimation;
+    animation-duration: 2s;
+    animation-iteration-count:1;
+}
+
+/* Animations section */
+
+@keyframes sizechangeanimation {
+    100% {
+        width:40%;
+    }
+}
+
+
+/* Layout för mobil start här */
+
+@media screen and (max-width: 580px) {
+    #nav1 {
+        display:none;
+    }
+    #picture_fit {
+        
+        position:relative;
+        
+    }
+    #wrapper {
+        grid-template-rows: 10% 400px 40% 40% 40% 100px;
+        z-index:1;
+        margin-top:20px;
+
+    }
+
+}
+
+
+@media screen and (min-width: 580px) {
+    #wrapper {
+        grid-template-columns: 50% 50%;
+    }
+    
+}
