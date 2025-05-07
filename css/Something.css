@@ -121,6 +121,9 @@
     grid-area: sc1;
     background-color: red;
     top:-10px;
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
 }
 
 
@@ -128,16 +131,26 @@
 #section2 {
     grid-area: sc2;
     background-color: yellow;
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
 }
 
 #section3 {
     grid-area: sc3;
     background-color: grey;
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
 }
 
 #section4 {
     grid-area: sc4;
     background-color: purple;
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
+    
 }
 
 #section5 {
@@ -152,6 +165,19 @@
 #footer1 {
     grid-area: ft;
     background-color:orange;
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
+}
+
+.footer_image_fit {
+    height:70px;
+    width:120px;
+}
+
+.facebook_logo_fit {
+    height:120px;
+    width:120px;
 }
 
 .logo_fit {
@@ -184,11 +210,25 @@
 
 /* Animations section */
 
+.Transitionsizeanimation {
+    width:200px;
+    border-radius:10%;
+    transition:width 1s ease-out 100ms;
+    
+    
+}
+
+.Transitionsizeanimation:hover {
+    width:225px;
+}
+
+
 @keyframes sizechangeanimation {
     100% {
         width:40%;
     }
 }
+
 
 
 /* Layout för mobil start här */
